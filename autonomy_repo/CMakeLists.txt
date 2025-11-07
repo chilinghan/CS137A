@@ -13,7 +13,7 @@ install(PROGRAMS
     scripts/heading_controller.py
     scripts/p3_plot.py
     scripts/navigator.py
-    scripts/navigator2.py
+    scripts/perception_controller.py
     DESTINATION lib/${PROJECT_NAME}
 )
 

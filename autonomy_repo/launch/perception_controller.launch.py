@@ -33,7 +33,7 @@ def generate_launch_description():
                 executable="rviz_goal_relay.py",
                 package="asl_tb3_lib",
                 parameters=[
-                    {"output_channel": "/cmd_nav"},
+                    {"output_channel": "/cmd_pose"},
                 ],
             ),
             # state publisher for turtlebot
@@ -41,12 +41,10 @@ def generate_launch_description():
                 executable="state_publisher.py",
                 package="asl_tb3_lib",
             ),
+            # student's heading controller node
             Node(
-                executable="navigator.py",
+                executable="perception_controller.py",
                 package="autonomy_repo",
-                parameters=[
-                    {"use_sim_time": use_sim_time}
-                ]
             ),
         ]
     )
